@@ -18,7 +18,8 @@ gem 'jquery-rails'
 #
 gem 'carrierwave', '~> 2.0'
 gem 'will_paginate',           '3.1.8'
-gem 'bootstrap-will_paginate', '1.0.0'
+gem 'will_paginate-bootstrap4', '~> 0.2.2'
+gem 'faker',                   '2.1.2'
 #
 gem 'bcrypt',         '3.1.13'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker

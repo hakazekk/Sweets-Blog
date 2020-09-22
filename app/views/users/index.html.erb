@@ -3,7 +3,7 @@
 <%= will_paginate %>
 
 <ul class="users">
-  <%= render @users %>
+  <%= render @users, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
 </ul>
 
 <%= will_paginate %>
