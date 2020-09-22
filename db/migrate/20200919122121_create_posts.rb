@@ -5,7 +5,7 @@ class CreatePosts < ActiveRecord::Migration[6.0]
       t.integer :price
       t.string :store
       t.string :address
-      t.string :image_path
+      t.string :image
       t.text :comment
       t.integer :user_id
 
