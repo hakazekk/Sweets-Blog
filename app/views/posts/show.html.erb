@@ -1,0 +1,14 @@
+
+<section class="post_info">
+  <%= image_tag @post.image.url, size: '300x300', align: 'center', alt: "Sweet Image" %><br>
+  <p><%= "商品名：#{@post.name}" %></p>
+  <p><%= "値段：#{@post.price}円" %></p>
+  <p><%= "店名：#{@post.store}" %></p>
+  <p><%= "住所：#{@post.address}" %></p>
+  <p><%= "投稿者：#{@post.user.name}" %></p>
+  <p><%= "コメント：#{@post.comment}" %></p>
+  <% if @post.user.id == current_user.id %>
+    <%= link_to "変更", edit_post_path %>
+    <%= link_to "削除", post_path, method: :delete %>
+  <% end %>
+</section>

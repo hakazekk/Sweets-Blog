@@ -141,6 +141,21 @@ aside {
   }
 }
 
+.post_part {
+  text-align: center;
+  img {
+    margin-bottom: 20px;
+  }
+  a {
+    color: black;
+  }
+}
+
+.post_info {
+  width: 600px;
+  margin: 0 auto;
+}
+
 /* forms */
 
 input, textarea, select, .uneditable-input {
