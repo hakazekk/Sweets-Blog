@@ -1,5 +1,10 @@
 class User < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
+
+  has_many :posts, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :liked_posts, through: :likes, source: :post
+
   attr_accessor :remember_token
   before_save { self.email = email.downcase }
   validates :name, presence: true, length: { maximum: 50 }
@@ -9,6 +14,10 @@ class User < ApplicationRecord
             uniqueness: true
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+
+  def already_liked?(post)
+    self.likes.exists?(post_id: post.id)
+  end
 
   # 渡された文字列のハッシュ値を返す
   def User.digest(string)

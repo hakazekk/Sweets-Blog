@@ -126,18 +126,18 @@ aside {
       border: 0;
       padding-top: 0;
     }
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
-    h1 {
-      font-size: 1.4em;
-      text-align: left;
-      letter-spacing: -1px;
-      margin-bottom: 3px;
-      margin-top: 0px;
-    }
+    // span {
+    //   display: block;
+    //   margin-bottom: 3px;
+    //   line-height: 1;
+    // }
+    // h1 {
+    //   font-size: 1.4em;
+    //   // text-align: left;
+    //   letter-spacing: -1px;
+    //   margin-bottom: 3px;
+    //   margin-top: 0px;
+    // }
   }
 }
 
@@ -157,6 +157,21 @@ aside {
 }
 
 /* forms */
+
+.jumbotron_width {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.form_container {
+  width: 600px;
+  margin: 0 auto;
+  img {
+    display: block;
+    margin: 20px auto;
+
+  }
+}
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;

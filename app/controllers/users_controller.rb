@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @posts = Post.where(user_id: @user.id).paginate(page: params[:page])
   end
 
   def new
@@ -45,6 +46,11 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
+  def likes
+    @user = User.find(params[:id])
+    @posts = @user.liked_posts.paginate(page: params[:page])
+  end
+
   private
 
     def user_params
@@ -53,14 +59,6 @@ class UsersController < ApplicationController
     end
 
     # before action
-
-    def logged_in_user
-      unless logged_in?
-        store_location
-        flash[:danger] = "Please log in."
-        redirect_to login_url
-      end
-    end
 
     def correct_user
       @user = User.find(params[:id])

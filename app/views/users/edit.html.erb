@@ -1,11 +1,8 @@
 <% provide(:button_text, "Save shanges") %>
-<h1>Update your profile</h1>
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
+<div class="jumbotron jumbotron_width">
+  <div class="form_container">
+    <h1>Update your profile</h1>
+    <%= image_tag @user.avatar.url, size: '100x100', alt: "User Image" %>
     <%= render 'form' %>
-    <div class="gravatar_edit">
-      <%= image_tag @user.avatar.url, size: '80x80', alt: "User Image" %>
-    </div>
   </div>
 </div>
