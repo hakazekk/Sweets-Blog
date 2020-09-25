@@ -1,4 +1,6 @@
 @import "bootstrap";
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -71,7 +73,6 @@ p {
   line-height: 1.7em;
 }
 
-
 /* header */
 header {
   color: white;
@@ -92,6 +93,7 @@ header {
 footer {
   border-top: 1px solid $gray-medium-light;
   color: gray;
+  margin-top: 80px;
   #footer-logo {
     @include logo;
     font-size: 1.5em;
@@ -155,6 +157,10 @@ aside {
   width: 600px;
   margin: 0 auto;
 }
+
+// font_awesome
+
+
 
 /* forms */
 
