@@ -8,14 +8,14 @@
   <body>
     <%= render 'layouts/header' %>
     <div class="container">
-    <% flash.each do |message_type, message| %>
+    <% flash.each do |message_type, message| %> <%# ページ上部のメッセージを表示 %>
         <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
       <% end %>
-      <div class="min-height">
+      <div class="min-height"> <%# ページ縦幅の最小値を指定 %>
         <%= yield %>
       </div>
       <%= render 'layouts/footer' %>
-      <%= debug(params) if Rails.env.development? %>
+      <%= debug(params) if Rails.env.development? %> <%# 開発デバッグようなので変更しないでいい %>
     </div>
   </body>
 </html>
