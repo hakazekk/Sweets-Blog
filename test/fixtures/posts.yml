@@ -2,18 +2,18 @@
 
 one:
   name: MyString
-  price: 
+  price:
   store: MyString
   address: MyString
-  image_path: MyString
+  image: MyString
   comment: MyText
-  user_id: 
+  user_id:
 
 two:
   name: MyString
-  price: 
+  price:
   store: MyString
   address: MyString
-  image_path: MyString
+  image: MyString
   comment: MyText
-  user_id: 
+  user_id:

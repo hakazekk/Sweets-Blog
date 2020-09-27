@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_23_141551) do
+ActiveRecord::Schema.define(version: 2020_09_26_115311) do
 
   create_table "likes", force: :cascade do |t|
     t.integer "user_id"
@@ -40,6 +40,9 @@ ActiveRecord::Schema.define(version: 2020_09_23_141551) do
     t.string "remember_digest"
     t.boolean "admin", default: false
     t.string "avatar"
+    t.string "activation_digest"
+    t.boolean "activated", default: false
+    t.datetime "activated_at"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
